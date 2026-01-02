@@ -8,6 +8,7 @@
     --purple: #513779;
     --light-purple: #7654B4;
     --lightest-purple: #967ECB;
+    --blackish: #05010B;
 }
 
 * {
@@ -169,65 +170,52 @@ p, button {
     }
 }
 
-.join-section {
-    display: flex;
+.contact-section {
+    background-color: var(--blackish);
     color: white;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 3rem;
 
-    .join-left-container,
-    .join-right-container {
-        flex: 1;
+    .contact-left-container {
+        display: grid;
+        gap: 1rem;
+        
+        .contact-title {
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .contact-text {
+            letter-spacing: 1px;
+            line-height: 1.75rem;
+            font-size: 1.5rem;
+        }
     }
 
-    .join-left-container {
+    .contact-form {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 1.5rem;
-        padding-left: 3rem;
+        gap: 1rem;
 
-        .join-title {
-            font-size: 2.5rem;
-            text-align: center;
+        .contact-input {
+            padding: 1.5rem;
         }
 
-        .join-text {
-            font-size: 1.25rem;
-            letter-spacing: 2px;
-            line-height: 1.5rem;
+        .contact-textarea {
+            flex: 1;
         }
 
-        .join-button {
+        .contact-button {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            padding: 1.5rem 2rem;
             align-self: flex-end;
-            padding: 1rem 2rem;
             cursor: pointer;
-            border: 2px solid white;
-            color: white;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1.25rem;
-            background-color: transparent;
-            transition: all .3s ease;
-        }
-
-        .join-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .join-button:active {
-            transform: scale(0.9);
-        }
-    }
-
-    .join-right-container {
-        aspect-ratio: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .join-image {
-            width: 80%;
-            aspect-ratio: 1;
-            border-radius: 50%;
+            background-color: var(--lightest-purple);
+            color: black;
         }
     }
 }
